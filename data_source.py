@@ -2,7 +2,7 @@ import pandas as pd
 import json, csv
 import boto3
 import io
-
+from sendData import send_to_DB, send_to_file
 def download_from_s3():
     KEY = 'userdata2.csv'
     BUCKET = 'leads-info-project' 
@@ -31,6 +31,8 @@ def data_distribution(data):
             high_priority_table.append(lead)
         else:
             file_data.append(lead)
+    send_to_DB(leads_table, high_priority_table)
+    send_to_file(file_data)
 
    
 
