@@ -22,9 +22,10 @@ RabbitMQ
 Using the Python client, Pika, create three channels and two queues for the leads. There should be two channels dedicated to sending leads into the database queue and one channel dedicated to sending the the text file queue. When you recieve the leads, this is when you connect to either the database or the text file to dump the leads into its desired location.
 PostgreSQL database
 
-PostgreSQL is a general-purpose object-relational database management system. It allows you to add custom functions developed using different programming languages such as C/C++, Java, etc. ... In PostgreSQL, we can define your own data types, index types, functional languages.
-Deploying Locally
+PostgreSQL is a general-purpose object-relational database management system. It allows you to add custom functions developed using different programming languages such as C/C++, Java, etc. ...
+Psycopg2 is a PostgreSQL database adapter.Allows Python code to execute PostgreSQL commands in a database session.
 
+Deploying Locally
     Open your terminal
     Start the RabbitMQ server
     Run receiveData.py
